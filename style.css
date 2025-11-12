@@ -1,27 +1,4 @@
-/* 
-  STYLE LEGEND (LEGENDAS/BREVE DOCUMENTAÇÃO)
-
-  Organização do arquivo (ordem lógica):
-  1) ESTILO GERAL    - reset, tipografia, variáveis (cores), container/estrutura base
-  2) CABEÇALHO       - logo, menu desktop, botões de menu mobile
-  3) MENU MOBILE     - regras do menu que abre no mobile e overlay
-  4) TOPO DO SITE     - hero: texto, imagem, animação "flutuar" e alinhamentos (flex)
-  5) ESPECIALIDADES   - blocos de conhecimento / cards
-  6) SOBRE            - sessão "sobre mim", imagem circular secundária
-  7) PORTFÓLIO        - cards/projetos com overlay
-  8) FORMULÁRIO       - estilos do formulário de contato
-  9) RODAPÉ           - footer, divisões e links
-  10) MEDIA QUERIES   - adaptação para telas <= 1020px
-
-  Dicas rápidas:
-  - Para localizar uma seção, pesquise pelos títulos "TOPO DO SITE", "ESPECIALIDADES", etc.
-  - Adicione novas regras dentro da seção correspondente e mantenha comentários descritivos.
-*/
-
-/* === 1) ESTILO GERAL === */
-/* reset básico, tipografia e containers gerais (interface, flex, botões principais) */
-
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -73,10 +50,12 @@ form .abner-enviar input:hover {
     transform: scale(1.05);
 }
 
-/* === 2) CABEÇALHO (header) === */
-/* logo, navegação desktop e estilos de hover */
+.mobile-break {
+    display: none;
+}
 
-.logo{
+/* === CABEÇALHO === */
+.logo {
     margin-top: 15px;
 }
 
@@ -109,21 +88,15 @@ header nav ul {
 header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
-
 }
 
-
-/* === 3) MENU MOBILE === */
-/* regras do menu mobile, overlay e botões de abrir/fechar */
-
-.btn-abrir-menu i{
+/* === MENU MOBILE === */
+.btn-abrir-menu i {
     color: #00ff08;
     font-size: 40px;
-    
 }
 
-
-.menu-mobile{
+.menu-mobile {
     background-color: #000;
     height: 100vh;
     position: fixed;
@@ -135,29 +108,28 @@ header nav.menu-desktop ul li {
     transition: .5s;
 }
 
-.menu-mobile.abrir-menu{
+.menu-mobile.abrir-menu {
     width: 70%;
-   
 }
 
-.menu-mobile.abrir-menu ~ .overlay-menu{
+.menu-mobile.abrir-menu~.overlay-menu {
     display: block;
 }
 
-.menu-mobile .btn-fechar i{
+.menu-mobile .btn-fechar i {
     color: #00ff08;
     font-size: 30px;
 }
 
-.menu-mobile .btn-fechar{
+.menu-mobile .btn-fechar {
     padding: 20px 5%;
 }
 
-.menu-mobile nav ul{
-    text-align: right; 
+.menu-mobile nav ul {
+    text-align: right;
 }
 
-.menu-mobile nav ul li a{
+.menu-mobile nav ul li a {
     color: #fff;
     font-size: 20px;
     font-weight: 300;
@@ -165,16 +137,16 @@ header nav.menu-desktop ul li {
     display: block;
 }
 
-.menu-mobile nav ul li a:hover{
+.menu-mobile nav ul li a:hover {
     background-color: #00ff08;
     color: #000;
 }
 
-.btn-abrir-menu{
-    display: block;
+.btn-abrir-menu {
+    display: none;
 }
 
-.overlay-menu{
+.overlay-menu {
     background-color: #000000c2;
     width: 100%;
     height: 100%;
@@ -185,35 +157,22 @@ header nav.menu-desktop ul li {
     display: none;
 }
 
-.btn-abrir-menu{
-    display: none;
-}
-
-
-/* === 4) TOPO DO SITE (HERO) === */
-/* 
-   - .topo-do-site: padding e espaçamento geral
-   - .topo-do-site .flex: usa flexbox para texto + imagem (justify-content: space-between)
-   - .img-topo-site: container que empurra a imagem para a direita (margin-left: auto)
-   - .img-topo-site img: animação 'flutuar' (position: relative + keyframes), aspect-ratio 1:1 para ficar quadrada
-*/
-
+/* === TOPO DO SITE === */
 section.topo-do-site {
     padding: 40px 4%;
-
 }
 
 section.topo-do-site .flex {
     align-items: center;
-    justify-content: space-between; /* AGORA VAI ESPAÇAR */
+    justify-content: space-between;
     gap: 90px;
 }
 
 section.topo-do-site .img-topo-site {
-    margin-left: auto;            /* empurra o bloco para a direita dentro do flex */
-    max-width: 460px;            /* limita largura do bloco para evitar overflow */
+    margin-left: auto;
+    max-width: 460px;
     display: flex;
-    justify-content: flex-end;   /* garante alinhamento da imagem dentro do bloco */
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -234,10 +193,10 @@ section.topo-do-site .img-topo-site {
 }
 
 .topo-do-site .img-topo-site img {
-    position: relative; /* reabilita deslocamento pelo keyframe */
-    animation: flutuar 2s ease-in-out infinite alternate; /* reativa o "flutuar" */
-    max-width: 900px; /* Um tamanho mais razoável */
-    width: 100%; /* Garante que ela seja responsiva */
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    max-width: 900px;
+    width: 100%;
     aspect-ratio: 1;
     border-radius: 20px;
     object-fit: cover;
@@ -253,16 +212,13 @@ section.topo-do-site .img-topo-site {
     }
 }
 
-/* === 5) ESPECIALIDADES === */
-/* cards com ícones, títulos e descrição; hover aumenta escala e sombra */
-
+/* === ESPECIALIDADES === */
 section.especialidades {
     padding: 40px 4%;
 }
 
 section.especialidades .flex {
     gap: 60px;
-
 }
 
 .especialidades .especialidades-box {
@@ -288,23 +244,16 @@ section.especialidades .flex {
     margin: 15px 0;
 }
 
-/* === 6) SOBRE === */
-/* imagem circular secundária (perfil), e texto com botão de redes sociais */
-
+/* === SOBRE === */
 section.sobre {
     padding: 80px 4%;
 }
-
-
-/* IMAGEM DE PERFIL 2 A BAIXO */
 
 .sobre .img-sobre img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
     width: 300px;
-    /* Ajuste o tamanho conforme necessário */
     height: 300px;
-    /* Ajuste o tamanho conforme necessário */
     border-radius: 50%;
     object-fit: cover;
 }
@@ -312,7 +261,6 @@ section.sobre {
 section.sobre .flex {
     align-items: center;
     gap: 60px;
-
 }
 
 .sobre .txt-sobre {
@@ -323,7 +271,6 @@ section.sobre .flex {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 30px;
-
 }
 
 .sobre .txt-sobre h2 span {
@@ -348,9 +295,7 @@ section.sobre .flex {
     transition: .2s;
 }
 
-/* === 7) PORTFÓLIO === */
-/* cards com background-image, overlay com descrição; bordas arredondadas */
-
+/* === PORTFÓLIO === */
 section.portifolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
@@ -413,9 +358,7 @@ section.portifolio .flex {
     opacity: 1;
 }
 
-/* === 8) FORMULÁRIO === */
-/* inputs/textarea estilizados e botão de envio */
-
+/* === FORMULÁRIO === */
 section.formulario {
     padding: 80px 4%;
 }
@@ -440,7 +383,6 @@ form textarea {
     border-radius: 15px;
     color: #fff;
     font-size: 18px;
-
 }
 
 form textarea {
@@ -462,13 +404,10 @@ form .abner-enviar input {
     transition: .2s;
 }
 
-/* === 9) RODAPÉ === */
-/* layout do footer, separador em borda e contatos */
-
+/* === RODAPÉ === */
 footer {
     padding: 60px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
-
 }
 
 footer .flex {
@@ -492,14 +431,16 @@ footer .line-footer p a {
     color: #fff;
 }
 
-
+/* === RESPONSIVO === */
 @media screen and (max-width: 1020px) {
-
-    .btn-abrir-menu{
-        display:block;
+    .mobile-break {
+        display: block;
     }
-    
-    /*CLASSES GERAIS */
+
+    .btn-abrir-menu {
+        display: block;
+    }
+
     .flex {
         flex-direction: column;
     }
@@ -513,93 +454,84 @@ footer .line-footer p a {
         flex-direction: column-reverse;
     }
 
-    /* CABEÇALHO */
-
     .menu-desktop,
     .abner-contato {
         display: none;
     }
 
-    /* === Reset para mobile: remover margem que empurra para a direita === */
-    section.topo-do-site .img-topo-site {
-        margin-left: 0;
-        max-width: 100%;
-        justify-content: center;
+    .topo-do-site .img-topo-site img {
+        width: 70%;
+        max-width: 300px;
+        aspect-ratio: 1;
+        border-radius: 20px;
+        object-fit: cover;
+        margin: 0 auto;
+        transform: translateX(-40px);
     }
-}
 
-/*TOPO DO SITE */
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
 
-section.topo-do-site .flex {
-    gap: 40px;
-}
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
 
-section.topo-do-site {
-    padding: 20px 8%;
+    .topo-do-site .txt-topo-site{
+        text-align: center;
+    }
 
-}
+    .topo-do-site .txt-topo-site p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-.topo-do-site h1 {
-    color: #fff;
-    font-size: 30px;
-    line-height: 40px;
-}
+    .topo-do-site h1 {
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+    }
 
-.topo-do-site .img-topo-site img {
-    width: 60%;
-    aspect-ratio: 1;
-    border-radius: 60px;
-    object-fit: cover;
-}
+    section.especialidades {
+        padding: 10px 8%;
+    }
 
-/* === 5) ESPECIALIDADES === */
-/* cards com ícones, títulos e descrição; hover aumenta escala e sombra */
+    section.sobre {
+        padding: 80px 8%;
+    }
 
-section.especialidades {
-    padding: 40px 8%;
-}
+    .sobre .txt-sobre h2 {
+        font-size: 20px;
+        line-height: 35px;
+        text-align: center;
+    }
 
-/* SOBRE */
+    .abner-social {
+        text-align: center;
+    }
 
-section.sobre {
-    padding: 80px 8%;
-}
+    section.portifolio {
+        padding: 80px 8%;
+    }
 
-.sobre .txt-sobre h2 {
-    font-size: 34px;
-    line-height: 35px;
-    text-align: center;
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
 
-}
+    section.portifolio .flex {
+        gap: 60px;
+    }
 
-.abner-social{
-    text-align: center;
-}
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
 
-/*  ESTILO DO PORTIFOLIO */
-
-section.portifolio {
-    padding: 80px 8%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
-}
-
-.img-port {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-}
-
-section.portifolio .flex {
-    gap: 60px;
-}
-
-/* RODAPÉ */
-
-footer .flex{
-    flex-direction: column;
-    gap: 30px;
-}
-
-footer .line-footer{
-    text-align: center;
+    footer .line-footer {
+        text-align: center;
+    }
 }
