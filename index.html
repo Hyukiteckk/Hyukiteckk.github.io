@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abner Martins | Dev</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portfólio de Abner Martins — Analista de T.I. especializado em SQL, Python, suporte e automação. Baseado em São Paulo, Brasil.">
+    <meta name="keywords"    content="Abner Martins, Analista TI, SQL, Python, JavaScript, portfólio, desenvolvedor">
+    <meta name="author"      content="Abner Martins">
+
+    <!-- Open Graph -->
+    <meta property="og:title"       content="Abner Martins | Dev & Analista T.I.">
+    <meta property="og:description" content="Analista de T.I. na Q2 Ingressos. SQL, Python, automação e muito café.">
+    <meta property="og:image"       content="images/perfil.jpeg">
+    <meta property="og:type"        content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text y='.9em' font-size='70' x='12'>💻</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">
+                    <i class="bi bi-terminal-fill"></i>
+                </div>
+                <span class="logo-text">abner<span class="logo-dot">.dev</span></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home"        class="nav-link active">Início</a></li>
+                <li><a href="#sobre"       class="nav-link">Sobre</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                <li><a href="#skills"      class="nav-link">Skills</a></li>
+                <li><a href="#projetos"    class="nav-link">Projetos</a></li>
+                <li><a href="#contato"     class="nav-link">Contato</a></li>
+            </ul>
+
+            <a href="https://wa.me/5516992769515" class="btn-nav" target="_blank">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- hero -->
+    <section class="hero" id="home">
+        <!-- partículas criadas via JS -->
+        <div class="particles" id="particles"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Olá, mundo! 👋</p>
+
+                <h1 class="hero-title">
+                    Sou <span class="gradient-text">Abner Martins</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    <span class="typing-prefix">Especialista em </span>
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </p>
+
+                <p class="hero-description">
+                    Analista de T.I. na Q2 Ingressos apaixonado por tecnologia,
+                    desenvolvimento de software e resolução de problemas complexos.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn-primary">
+                        Ver Projetos <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="https://github.com/Hyukiteckk" class="btn-secondary" target="_blank">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="https://github.com/Hyukiteckk" target="_blank" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abner-martinss/" target="_blank" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/abnermartins_prado/" target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="mailto:abinhomartins@gmail.com" aria-label="Email">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="profile-wrapper">
+                    <img src="images/perfil.jpeg" alt="Abner Martins" class="profile-img" onerror="this.style.opacity='0'">
+                    <div class="badge-float badge-1">
+                        <i class="bi bi-code-slash"></i> Dev
+                    </div>
+                    <div class="badge-float badge-2">
+                        <i class="bi bi-shield-check"></i> T.I.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- faixa de tecnologias rolando — itens duplicados para o loop ser contínuo -->
+    <div class="tech-marquee">
+        <div class="marquee-fade-left"></div>
+        <div class="marquee-fade-right"></div>
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <span class="marquee-item"><i class="bi bi-filetype-py"></i> Python</span>
+                <span class="marquee-item"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                <span class="marquee-item"><i class="bi bi-filetype-html"></i> HTML / CSS</span>
+                <span class="marquee-item"><i class="bi bi-database-fill"></i> SQL Server</span>
+                <span class="marquee-item"><i class="bi bi-cup-hot"></i> Java</span>
+                <span class="marquee-item"><i class="bi bi-git"></i> Git</span>
+                <span class="marquee-item"><i class="bi bi-discord"></i> Discord API</span>
+                <span class="marquee-item"><i class="bi bi-cpu-fill"></i> Hardware</span>
+                <span class="marquee-item"><i class="bi bi-diagram-3-fill"></i> Redes</span>
+                <span class="marquee-item"><i class="bi bi-shield-check"></i> Antifraude</span>
+                <span class="marquee-item"><i class="bi bi-terminal-fill"></i> Linux</span>
+                <span class="marquee-item"><i class="bi bi-window-stack"></i> Windows Server</span>
+                <span class="marquee-item"><i class="bi bi-filetype-py"></i> Python</span>
+                <span class="marquee-item"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                <span class="marquee-item"><i class="bi bi-filetype-html"></i> HTML / CSS</span>
+                <span class="marquee-item"><i class="bi bi-database-fill"></i> SQL Server</span>
+                <span class="marquee-item"><i class="bi bi-cup-hot"></i> Java</span>
+                <span class="marquee-item"><i class="bi bi-git"></i> Git</span>
+                <span class="marquee-item"><i class="bi bi-discord"></i> Discord API</span>
+                <span class="marquee-item"><i class="bi bi-cpu-fill"></i> Hardware</span>
+                <span class="marquee-item"><i class="bi bi-diagram-3-fill"></i> Redes</span>
+                <span class="marquee-item"><i class="bi bi-shield-check"></i> Antifraude</span>
+                <span class="marquee-item"><i class="bi bi-terminal-fill"></i> Linux</span>
+                <span class="marquee-item"><i class="bi bi-window-stack"></i> Windows Server</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sobre -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// sobre_mim</span>
+                <h2 class="section-title">Quem sou <span class="gradient-text">eu?</span></h2>
+            </div>
+
+            <div class="sobre-grid">
+                <div class="sobre-image reveal">
+                    <img src="images/perfil.jpeg" alt="Abner Martins">
+                    <div class="image-border"></div>
+                </div>
+
+                <div class="sobre-content reveal">
+                    <p class="sobre-text">
+                        Olá! Sou <strong>Abner Martins</strong>, Analista de T.I. na
+                        <strong>Q2 Ingressos</strong> com foco em banco de dados e infraestrutura.
+                        Minha jornada na tecnologia começou com curiosidade e hoje é minha profissão e paixão.
+                    </p>
+                    <p class="sobre-text">
+                        Tenho experiência com Python, Java, HTML/CSS e banco de dados. Estou sempre
+                        evoluindo e buscando novos desafios na área de desenvolvimento e infraestrutura.
+                    </p>
+
+                    <!-- contadores animados via JS -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="9">0</span>
+                            <span class="stat-label">Tecnologias</span>
+                        </div>
+                    </div>
+
+                    <div class="sobre-actions">
+                        <a href="#" class="btn-primary">
+                            <i class="bi bi-download"></i> Baixar CV
+                        </a>
+                        <a href="#contato" class="btn-secondary">
+                            <i class="bi bi-chat-dots"></i> Vamos Conversar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- experiência profissional -->
+    <section class="experiencia" id="experiencia">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// trajetória</span>
+                <h2 class="section-title">Minha <span class="gradient-text">Experiência</span></h2>
+            </div>
+
+            <div class="timeline">
+
+                <!-- cargo atual -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot dot-active"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <div class="timeline-company-info">
+                                <div class="company-logo logo-q2">
+                                    <i class="bi bi-ticket-perforated-fill"></i>
+                                </div>
+                                <div>
+                                    <h3 class="timeline-role">Analista de Suporte T.I.</h3>
+                                    <p class="timeline-company">Q2 Ingressos</p>
+                                </div>
+                            </div>
+                            <div class="timeline-period">
+                                <span class="period-badge current">
+                                    <span class="pulse-dot"></span> Atual
+                                </span>
+                                <span class="period-dates">Out 2025 · Presente</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">
+                            Responsável pela gestão e manutenção do banco de dados SQL da plataforma,
+                            desenvolvendo queries, inserts e relatórios gerenciais que apoiam decisões
+                            operacionais. Atuo diretamente na resolução de incidentes críticos no site
+                            principal de venda de ingressos, garantindo disponibilidade e integridade
+                            dos dados para milhares de transações diárias.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">Banco de Dados</span>
+                            <span class="tag">Suporte T.I.</span>
+                            <span class="tag">Relatórios</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <div class="timeline-company-info">
+                                <div class="company-logo logo-q2">
+                                    <i class="bi bi-ticket-perforated-fill"></i>
+                                </div>
+                                <div>
+                                    <h3 class="timeline-role">Analista de Riscos</h3>
+                                    <p class="timeline-company">Q2 Ingressos</p>
+                                </div>
+                            </div>
+                            <div class="timeline-period">
+                                <span class="period-dates">Abr 2025 · Out 2025</span>
+                                <span class="period-duration">6 meses</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">
+                            Atuei na prevenção de fraudes e contestações de transações financeiras
+                            na plataforma. Realizei análises minuciosas de comportamento suspeito,
+                            identificando padrões de risco e tomando ações preventivas para mitigar
+                            chargebacks, protegendo a receita da empresa e a experiência dos clientes.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Antifraude</span>
+                            <span class="tag">Análise de Risco</span>
+                            <span class="tag">Chargeback</span>
+                            <span class="tag">Fintech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <div class="timeline-company-info">
+                                <div class="company-logo logo-magalu">
+                                    <i class="bi bi-bag-fill"></i>
+                                </div>
+                                <div>
+                                    <h3 class="timeline-role">Assistente BackOffice</h3>
+                                    <p class="timeline-company">Magazine Luiza</p>
+                                </div>
+                            </div>
+                            <div class="timeline-period">
+                                <span class="period-dates">Out 2020 · Mar 2025</span>
+                                <span class="period-duration">4 anos e 5 meses</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">
+                            Responsável pelo BackOffice 1P do marketplace, gerenciando o fluxo
+                            de pedidos e realizando reprocessamentos de transações com inconsistências.
+                            Garantia a fluidez operacional entre os sistemas logísticos e a plataforma
+                            de vendas, sendo ponto de suporte interno para resolução de falhas no
+                            processamento de pedidos.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">BackOffice</span>
+                            <span class="tag">Marketplace</span>
+                            <span class="tag">Operações</span>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- skills -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// tecnologias</span>
+                <h2 class="section-title">Minhas <span class="gradient-text">Skills</span></h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon python"><i class="bi bi-filetype-py"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">Python</h3>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon html"><i class="bi bi-filetype-html"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">HTML / CSS</h3>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon java"><i class="bi bi-cup-hot"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">Java</h3>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon js"><i class="bi bi-filetype-js"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">JavaScript</h3>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon db"><i class="bi bi-database-fill"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">SQL / Database</h3>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon git"><i class="bi bi-git"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">Git / GitHub</h3>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon comunicacao"><i class="bi bi-people-fill"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">Comunicação</h3>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon redes"><i class="bi bi-diagram-3-fill"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">Redes</h3>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon hardware"><i class="bi bi-cpu-fill"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <h3 class="skill-name">Hardware</h3>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- projetos -->
+    <section class="projetos" id="projetos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// meus_projetos</span>
+                <h2 class="section-title">Projetos <span class="gradient-text">Recentes</span></h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="proj-placeholder proj-bot">
+                            <i class="bi bi-discord"></i>
+                            <span>Dark Moon Bot</span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Hyukiteckk/Dark-Moon-Bot" class="project-link" target="_blank">
+                                <i class="bi bi-github"></i> Repositório
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Dark Moon Bot</h3>
+                        <p class="project-desc">
+                            Bot para Discord em Python com IA integrada, sistema de pontuação por
+                            atividade em chamadas de voz e arquitetura modular de comandos.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Discord.py</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="proj-placeholder proj-app">
+                            <i class="bi bi-moon-stars-fill"></i>
+                            <span>Dark Moon</span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Hyukiteckk/dark-moon" class="project-link" target="_blank">
+                                <i class="bi bi-github"></i> Repositório
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Dark Moon</h3>
+                        <p class="project-desc">
+                            Ferramenta desktop de utilidades para Discord com plugins BetterDiscord
+                            e automações via Cloudflare Workers. Compilável para executável Windows.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">BetterDiscord</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="proj-placeholder proj-python">
+                            <i class="bi bi-filetype-py"></i>
+                            <span>Meus Projetos</span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/Hyukiteckk/Meus-Projetos" class="project-link" target="_blank">
+                                <i class="bi bi-github"></i> Repositório
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Meus Projetos Python</h3>
+                        <p class="project-desc">
+                            Coleção de mini projetos desenvolvidos durante os estudos de Python
+                            na faculdade. Cada projeto é documentado com explicações sobre as
+                            bibliotecas utilizadas e a lógica aplicada.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Algoritmos</span>
+                            <span class="tag">Estudos</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- contato -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// fale_comigo</span>
+                <h2 class="section-title">Entre em <span class="gradient-text">Contato</span></h2>
+            </div>
+
+            <div class="contato-grid">
+                <div class="contato-info reveal">
+                    <p class="contato-text">
+                        Tem um projeto em mente ou quer bater um papo sobre tecnologia?
+                        Estou sempre aberto a novas oportunidades e conexões!
+                    </p>
+
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <a href="mailto:abinhomartins@gmail.com" class="contact-value">
+                                    abinhomartins@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">WhatsApp</p>
+                                <a href="https://wa.me/5516992769515" class="contact-value" target="_blank">
+                                    +55 (16) 99276-9515
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">Localização</p>
+                                <span class="contact-value">São Paulo, Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://github.com/Hyukiteckk" target="_blank" class="social-link">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/abner-martinss/" target="_blank" class="social-link">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/abnermartins_prado/" target="_blank" class="social-link">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contato-form reveal" id="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Sobre o que quer falar?">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem..." required rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">
+                        <i class="bi bi-send"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">
+                        <div class="logo-icon">
+                            <i class="bi bi-terminal-fill"></i>
+                        </div>
+                        <span class="logo-text">abner<span class="logo-dot">.dev</span></span>
+                    </a>
+                    <p class="footer-desc">
+                        Desenvolvedor apaixonado por criar soluções tecnológicas inovadoras.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#experiencia">Experiência</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-grid">
+                        <a href="https://github.com/Hyukiteckk" target="_blank">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/abner-martinss/" target="_blank">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://www.instagram.com/abnermartins_prado/" target="_blank">
+                            <i class="bi bi-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Abner Martins · Feito com <i class="bi bi-heart-fill"></i> e muito café</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
